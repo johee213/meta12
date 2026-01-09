@@ -12,71 +12,76 @@
       }
 
       body {
+        display: flex;
         height: 100vh;
-        font-family: arial,sans-serif;
-        
+        font-family: Arial, Helvetica, sans-serif;
+      
       }
 
       /* 전체 대시보드 */
       .dashboard {
-        
+        display: flex;
+        /* 부모가 100vh(화면높이전체)를 차지하므로 그공간을 100%사용하겠다 */
+        height: 100%;
+       
       }
-
       /* 왼쪽 네비게이션 */
       .nav {
-        background-color:yellow;
-        flex-wrap: nowrap
-      
-
+        width: 220px;
+        /* flex: 0 0 220px; */
+        background-color:#1e272e;
+        color: white;
       }
 
       /* 오른쪽 전체 영역 */
       .right {
-        flex-direction: column-reverse;
-       
+         display: flex;
+         flex-direction: column;
+         flex: 1;
       }
+         
 
       /* 상단바 */
       .topbar {
-        background-color: gray;
-        top: 0px;          
-        left: 0;
-        width: 1px;
-        padding: 50px;
-        order: 0;
+         background-color: #485460;
+         height: 60px;
+         padding: 20px;
+         color: white;
+           
       }
 
       /* 콘텐츠 영역 */
       .content {
         display: flex;
-            gap: 20px;
-            
-          
+        background-color: #d2dae2;
+        flex: 1;
+        gap: 15px;
+        padding: 20px;
       }
 
       /* 메인 콘텐츠 */
       .main-content {
-      
-        flex: 1 1 calc(33.3333% - 20px);
-         padding: 10px;
-         background-color: pink;
+        background-color:white;
+        flex: 3;
+        padding: 20px;
       }
 
       /* 서브 패널 */
       .side-panel {
-        
+        background-color:#ffa801;
+        flex: 1;
+        padding: 20px;
       }
 
       /* 하단 정보바 */
       .status {
-      flex: 1 1 calc(33.3333% - 20px);
-         padding: 10px;
-        background-color: gray;
-        text-align: center;
-        position: fixed; 
-      
-        
-              
+        background-color:#808e9b;
+        height: 40px;
+        color: white;
+        /* 아래세줄은 글씨 가운데 배치하는 공식 그냥 외우기 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>

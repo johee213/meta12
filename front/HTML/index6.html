@@ -1,18 +1,35 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            /*중간 사이 띄우기*/
+            gap: 20px;
+            /* flex-direction: row; */
+        }
+        .sidebar{
+            background-color: #f0f0f0;
+            flex: 0 0 200px;
+        }
+        .main {
+            background-color: rgb(119, 0, 255);
+            /* flex: 1 1 0을 의미함.남은 공간 모두 차지 */
+            flex: 1;
+        }  
+    </style>
 </head>
 <body>
-    <p>하이버링크사용하기</p>
-    <div>
-        <p><a href="index5.html">다른 페이지로 이동하기</a></p>
-        <p><a href="https://google.com">구글로 이동하기</a></p>
-        <p><a href="https://google.com">
-            <img src="https://picsum.photos/500/300">
-        </a></p>
-     </div>
+    
+    <h3>flexbox 기본예제</h3>
+    <div class="container">
+        <div class="sidebar">사이드바</div>
+        <div class="margin">메인컨텐츠</div>
+        <div class="sidebar">사이드바</div>
+    </div>
+    
 </body>
 </html>

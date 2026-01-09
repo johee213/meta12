@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flexbox 레이아웃 예제</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+
+      /* 전체 페이지 */
+      .page {
+         height: 100%;    
+      
+      }
+
+      /* 헤더 */
+      .header {
+        background-color: navy;
+        flex: top;
+       flex-direction: row;
+        display: flex;
+        color: white;
+      }
+
+      /* 메인 영역 (사이드 + 콘텐츠) */
+      .main {
+        display: flex;
+        height: 100%;
+      }
+
+      /* 사이드 메뉴 */
+      .sidebar {
+       width: 220px;
+       background-color: pink;
+        height: 100%;
+      }
+
+      /* 콘텐츠 영역 가운데 3개*/
+      .content {
+       background-color: yellow;      
+                flex: 1px;
+       height: 100%;
+      }
+
+      /* 본문 */
+      .article {
+        background-color: rgb(192, 255, 197);
+        flex: 2 ;
+        height: 30%; 
+      }
+
+      /* 이벤트 광고 */
+      .event {
+         flex: 1px;
+         height: 30%;
+      }
+
+      /* 로그인 창 */
+      .login {
+        background-color: rgb(0, 255, 221);
+         flex: 1px;
+         height: 30%;
+       
+
+      }
+
+      /* 푸터 */
+      .footer {
+         background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">헤더 (로고 / 상단메뉴)</header>
+
+      <div class="main">
+        <nav class="sidebar">사이드 메뉴</nav>
+
+        <section class="content">
+          <article class="article">본문 콘텐츠</article>
+
+          <div class="event">이벤트 광고</div>
+
+          <aside class="login">로그인 창</aside>
+        </section>
+      </div>
+
+      <footer class="footer">푸터</footer>
+    </div>
+  </body>
+</html>

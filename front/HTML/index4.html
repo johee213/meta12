@@ -1,66 +1,57 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        table, th, td{
-            border: 1px solid#ccc;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding:10px 20px;
-        }
-    </style>
     <title>Document</title>
+    <style>
+        .container{
+             /* 자식이 relative, absolute, fixed, sticky인 경우 기준점을 제공하기위해
+            반드시 부모는 relative여야함(static이면 됨) */
+            position: relative;
+            width: 400px;
+            border: 3px solid black;
+            padding: 10px;
+            margin: 20px;
+            background-color: aliceblue;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            /* 내부요소(글자,이미지 또는 자식태그)를 가운데 정렬하는 방법 세트로외우기 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .box1{
+            background-color: #e74c3c;
+        }
+        .box2{
+           
+            position: relative;
+            /* position: position; */
+            top: 50px;
+            left: 50px;
+            opacity: 0.8;
+            background-color: #3498db;
+        }
+        .box3{
+            background-color: #2ecc71;
+        }
+            
+    </style>
 </head>
 <body>
-    <h3>순서없는 리스트</h3>
-    <ol>
-        <li>항목1</Li>
-        <li>항목2</Li>
-        <li>항목3</Li>
-    </ol>
-    <h3>순서없는 리스트</h3>
-    <ul>
-        <Li>항목1</Li>
-        <Li>항목2</Li>
-        <Li>항목3</Li>
-    </ul>
-    <h2>상품구성</h2>
-    <table>
-        <caption>선물용 가정용 상품 구성</caption>2
-        <thead>
-        <tr> 
-            <th>용도</th>
-            <th>중량</th>
-            <th>개수</th>
-            <th>가격</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td rowspan="2">선물용</td>
-            <td>3kg</td>
-            <td>11~16과</td>
-            <td>35,000월</td>
-        </tr>
-        <tr>
-            <td>5kg</td>
-            <td>18~26과</td>
-            <td>52,000원</td>
-        </tr>
-        <tr>
-            <td rowspan="2">가정용</td>
-            <td>3kg</td>
-            <td>11~16과</td>
-            <td>30,000원</td>
-        </tr>
-        <tr>
-            <td>5kg</td>
-            <td>18~26과</td>
-            <td>47,000원</td>
-        </tr>
-    </table>
+    <h3>position 속성 예제 - relative와 absolute</h3>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2 (Target)</div>
+        <div class="box box3">3</div>
+    </div>
+    
 </body>
 </html>
